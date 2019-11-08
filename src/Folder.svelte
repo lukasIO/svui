@@ -4,9 +4,9 @@
 
 </script>
 
-<div class="folder-container">
-	<p on:click={() => isOpen = !isOpen}>{name}</p>
-	<div class="folder" class:isOpen>
+<div class="folder-container"  on:click={() => isOpen = !isOpen}>
+	<p>{name}</p>
+	<div class="folder" class:isOpen on:click|stopPropagation>
 		<slot></slot> 
 	</div>
 </div>
